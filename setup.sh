@@ -1,35 +1,96 @@
-echo "Cloning AwesomeWM dotfiles..."
+# make config dir fn
+mkconfig () {
+    if [[ ! -d ~/.config ]]; then
+        mkdir -p ~/.config
+    fi
+}
 
-if [[ ! -d "~/.config" ]]; then
-    mkdir -p ~/.config
+write_git_config () {
+    echo "Installing git configuration..."
+    
+    cp ./gitconfig ~/.gitconfig
+
+    cp ./gitignore_global ~/.gitignore_global
+}
+
+# Simple argparse, don't need to be fancy
+if [[ $1 == "all" ]]; then
+    args=( "awesome" "nvim" "git" "other" )
+else
+    args=( "$@" )
 fi
 
-git clone https://github.com/warnespe001/awesome-dotfiles ~/.config/awesome
+for arg in ${args[@]}; do
+    case $arg in
+        awesome)
+            mkconfig
 
-cd ~/.config/awesome
+            if [[ ! -d ~/.config/awesome ]]; then
+                echo "Cloning AwesomeWM dotfiles..."
+                git clone https://github.com/warnespe001/awesome-dotfiles ~/.config/awesome > /dev/null
+            else
+                echo "Updating AwesomeWM dotfiles..."
+            fi
 
-echo "Checking out latest Awesome config..."
+            cd ~/.config/awesome
+            git checkout custom-config &> /dev/null
+            git pull > /dev/null
 
-git checkout custom-config
+            cd - > /dev/null
+        ;;
+        nvim|neovim)
+            mkconfig
 
-git pull
+            if [[ ! -d ~/.config/nvim ]]; then
+                echo "Cloning neovim configuration..."
+                git clone https://github.com/warnespe001/neovim-config ~/.config/nvim > /dev/null
+            else
+                echo "Updating neovim configuration..."
+            fi
 
-echo "Cloning neovim configuration..."
+            cd ~/.config/nvim
 
-git clone https://github.com/warnespe001/neovim-config ~/.config/nvim
+            git submodule update --init > /dev/null
+            git pull > /dev/null
 
-cd ~/.config/nvim
+            echo "Installing neovim plugins..."
 
-git submodule update --init
+            nvim --headless +PluginInstall +qall &> /dev/null
 
-echo "Installing neovim plugins..."
+            cd - > /dev/null
+        ;;
+        git)
+            if [[ ! -e ~/.gitconfig ]]; then
+                write_git_config
+            else
+                read -p "Overwrite existing gitconfig? [y/N] " -n 1 -r
 
-nvim --headless +PluginInstall +qall &> /dev/null
+                if [[ $REPLY == "y" ]]; then
+                    write_git_config
+                else
+                    echo "Refusing to overwrite gitconfig."
+                fi
+            fi
+        ;;
+        other)
+            echo "Installing various other configurations..."
 
-echo "Installing various other configurations..."
+            mkconfig
 
-git clone https://github.com/Jeremie1001/dotfiles ~/.dotfiles
+            if [[ ! -d ~/.dotfiles ]]; then
+                git clone https://github.com/Jeremie1001/dotfiles ~/.dotfiles > /dev/null
+            fi
 
-cd ~/.dotfiles/.config
+            cd ~/.dotfiles/.config
 
-cp -r dmenu picom rofi sddm xmenu ~/.config 
+            cp -r dmenu picom rofi sddm xmenu ~/.config 
+
+            cd - > /dev/null
+        ;;
+        *)
+            echo "Unknown option $arg"
+        ;;
+    esac
+done
+
+

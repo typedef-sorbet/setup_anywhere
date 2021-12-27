@@ -1,0 +1,51 @@
+[user]
+	name = Spencer Warneke
+	email = warnespe001@gmail.com
+[alias]
+	st = status
+	cm = commit
+	cf = config
+	cfg = config --global
+	cma = commit --amend
+	cmaf = commit --amend --force --no-verify
+	stl = stash list
+	stap = stash apply
+	stpm = stash push -m
+	stp = stash push
+	ch = checkout
+	rb = rebase
+	rbi = rebase -i
+	dt = difftool
+	su = submodule update
+	sui = submodule update --init
+	endcap = ! /home/sanctity/endcapScript
+	chp = cherry-pick
+	rbc = rebase --continue
+	cmf = commit --no-verify
+	l = log
+	fp = format-patch
+	oops = commit --amend --no-edit
+	shove = push --force
+	reword = commit --amend
+	rba = rebase --abort
+	slog = log --format=\"%C(auto) %h %s\"
+[diff]
+	tool = meld
+[difftool "meld"]
+	cmd = /usr/bin/meld $LOCAL $REMOTE
+[merge]
+	tool = meld
+[mergetool "meld"]
+	cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+[core]
+	editor = nvim
+	hooksPath = .git/hooks
+	excludesfile = /home/sanctity/.gitignore_global
+[credential]
+	helper = cache --timeout=300
+[difftool]
+	prompt = false
+[color]
+	ui = auto
+[pull]
+	ff = only
