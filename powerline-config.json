@@ -1,0 +1,20 @@
+{
+  "segments": [
+    "time",
+    "virtual_env",
+    "username",
+    "ssh",
+    "cwd",
+    "git",
+    "hg",
+    "root"
+  ],
+  "time": {
+        "format": "%I:%M"
+  },
+  "cwd": {
+        "max_depth": 4,
+        "max_dir_size": 32
+  },
+  "theme": "~/.config/powerline-shell/themes/dracula.py"
+}

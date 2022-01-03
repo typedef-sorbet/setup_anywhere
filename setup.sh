@@ -13,9 +13,12 @@ write_git_config () {
     cp ./gitignore_global ~/.gitignore_global
 }
 
+# Save pwd.
+SCRIPTDIR=`pwd`
+
 # Simple argparse, don't need to be fancy
 if [[ $1 == "all" ]]; then
-    args=( "awesome" "nvim" "git" "other" )
+    args=( "awesome" "nvim" "git" "powerline" "other" )
 else
     args=( "$@" )
 fi
@@ -70,6 +73,35 @@ for arg in ${args[@]}; do
                 else
                     echo "Refusing to overwrite gitconfig."
                 fi
+            fi
+        ;;
+        powerline-shell|powerline|pl)
+            mkconfig
+
+            cd /tmp
+
+            git clone https://github.com/warnespe001/powerline-shell > /dev/null
+            cd /tmp/powerline-shell
+            git checkout feature/truecolor
+            git pull
+
+            # setup script requires sudo. This should initiate an askpass.
+            sudo python3 setup.py install
+
+            if [[ ! -d ~/.config/powerline-shell/themes ]]; then
+                mkdir -p ~/.config/powerline-shell/themes
+            fi
+
+            cd $SCRIPTDIR
+
+            cp ./powerline-config.json ~/.config/powerline-shell/config.json
+            cp ./powerline-dracula.py ~/.config/powerline-shell/themes/dracula.py
+
+            # Append powerline prompt command to bashrc
+            # This obviously assumes the host system uses bash (which I pretty much always do)
+            grep "_update_ps1" ~/.bashrc > /dev/null
+            if [[ $? != 0 ]]; then
+                cat ./powerline-blob >> ~/.bashrc
             fi
         ;;
         other)
