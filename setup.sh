@@ -18,7 +18,7 @@ SCRIPTDIR=`pwd`
 
 # Simple argparse, don't need to be fancy
 if [[ $1 == "all" ]]; then
-    args=( "awesome" "nvim" "git" "powerline" "other" )
+    args=( "awesome" "nvim" "git" "powerline" "kitty" "other" )
 else
     args=( "$@" )
 fi
@@ -103,6 +103,15 @@ for arg in ${args[@]}; do
             if [[ $? != 0 ]]; then
                 cat ./powerline-blob >> ~/.bashrc
             fi
+        ;;
+        kitty)
+            mkconfig
+
+            if [[ ! -d ~/.config/kitty ]]; then
+                mkdir -p ~/.config/kitty
+            fi
+
+            cp ./kitty/*.conf ~/.config/kitty/
         ;;
         other)
             echo "Installing various other configurations..."
