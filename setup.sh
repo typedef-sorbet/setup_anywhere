@@ -14,11 +14,12 @@ write_git_config () {
 }
 
 # Save pwd.
+# TODO this assumes that the script is running from the setup_anywhere dir
 SCRIPTDIR=`pwd`
 
 # Simple argparse, don't need to be fancy
 if [[ $1 == "all" ]]; then
-    args=( "awesome" "nvim" "git" "powerline" "kitty" "other" )
+    args=( "awesome" "nvim" "git" "powerline" "kitty" "dwm" "conky" "dunst" "other" )
 else
     args=( "$@" )
 fi
@@ -112,6 +113,78 @@ for arg in ${args[@]}; do
             fi
 
             cp ./kitty/*.conf ~/.config/kitty/
+        ;;
+        dwm)
+            echo "Clone dwm repo into home directory? (dfl: /tmp) [y/N] "
+
+            read -n1 ans
+
+            if [[ "$ans" == "y" || "$ans" == "Y" ]]; then
+                cd ~
+            else
+                cd /tmp
+            fi
+
+            git clone https://github.com/warnespe001/dwm.git > /dev/null
+
+            cd dwm
+
+            git pull > /dev/null
+
+            make
+
+            # Installation requires privs. This should initiate an askpass.
+            sudo make install
+            
+            cd $SCRIPTDIR
+        ;;
+        conky)
+            mkconfig
+
+            cd ~/.config
+
+            if [[ -d ~/.config/conky ]]; then
+                echo "~/.config/conky already exists; overwrite? [y/N] "
+                read -n1 ans
+                if [[ "$ans" != "y" && "$ans" != "Y" ]]; then
+                    echo "Refusing to overwrite existing conky configuration."
+                    continue
+                fi
+            fi
+
+            rm -r ~/.config/conky > /dev/null
+
+            git clone https://github.com/warnespe001/conky_config.git conky
+
+            cd conky
+
+            git pull
+
+            cd $SCRIPTDIR
+        ;;
+        dunst)
+            mkconfig
+
+            cd ~/.config
+
+            if [[ -d ~/.config/dunst ]]; then
+                echo "~/.config/dunst already exists; overwrite? [y/N] "
+                read -n1 ans
+                if [[ "$ans" != "y" && "$ans" != "Y" ]]; then
+                    echo "Refusing to overwrite existing dunst configuration."
+                    continue
+                fi
+            fi
+
+            rm -r ~/.config/dunst > /dev/null
+
+            git clone https://github.com/warnespe001/dunst_config.git dunst
+
+            cd dunst
+
+            git pull
+
+            cd $SCRIPTDIR
         ;;
         other)
             echo "Installing various other configurations..."
