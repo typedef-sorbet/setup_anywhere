@@ -1,0 +1,280 @@
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('WOFF2-unhinted/IosevkaTerminal-Regular.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: semi-condensed;
+	font-style: normal;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiCondensed.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiCondensed.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('WOFF2-unhinted/IosevkaTerminal-Oblique.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-Oblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web Oblique';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	src: url('WOFF2-unhinted/IosevkaTerminal-Oblique.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-Oblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: semi-condensed;
+	font-style: oblique;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiCondensedOblique.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiCondensedOblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web Oblique';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: semi-condensed;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiCondensedOblique.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiCondensedOblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('WOFF2-unhinted/IosevkaTerminal-Italic.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-Italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: semi-condensed;
+	font-style: italic;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiCondensedItalic.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiCondensedItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('WOFF2-unhinted/IosevkaTerminal-Medium.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: semi-condensed;
+	font-style: normal;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiCondensedMedium.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiCondensedMedium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('WOFF2-unhinted/IosevkaTerminal-MediumOblique.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-MediumOblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web Oblique';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	src: url('WOFF2-unhinted/IosevkaTerminal-MediumOblique.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-MediumOblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: semi-condensed;
+	font-style: oblique;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiCondensedMediumOblique.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiCondensedMediumOblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web Oblique';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: semi-condensed;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiCondensedMediumOblique.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiCondensedMediumOblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('WOFF2-unhinted/IosevkaTerminal-MediumItalic.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: semi-condensed;
+	font-style: italic;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiCondensedMediumItalic.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiCondensedMediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiBold.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: semi-condensed;
+	font-style: normal;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiCondensedSemiBold.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiCondensedSemiBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiBoldOblique.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiBoldOblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web Oblique';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: normal;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiBoldOblique.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiBoldOblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: semi-condensed;
+	font-style: oblique;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiCondensedSemiBoldOblique.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiCondensedSemiBoldOblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web Oblique';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: semi-condensed;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiCondensedSemiBoldOblique.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiCondensedSemiBoldOblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiBoldItalic.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: semi-condensed;
+	font-style: italic;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiCondensedSemiBoldItalic.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiCondensedSemiBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('WOFF2-unhinted/IosevkaTerminal-Bold.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: semi-condensed;
+	font-style: normal;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiCondensedBold.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiCondensedBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('WOFF2-unhinted/IosevkaTerminal-BoldOblique.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-BoldOblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web Oblique';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	src: url('WOFF2-unhinted/IosevkaTerminal-BoldOblique.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-BoldOblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: semi-condensed;
+	font-style: oblique;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiCondensedBoldOblique.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiCondensedBoldOblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web Oblique';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: semi-condensed;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiCondensedBoldOblique.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiCondensedBoldOblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('WOFF2-unhinted/IosevkaTerminal-BoldItalic.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Terminal Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: semi-condensed;
+	font-style: italic;
+	src: url('WOFF2-unhinted/IosevkaTerminal-SemiCondensedBoldItalic.woff2') format('woff2'), url('TTF-unhinted/IosevkaTerminal-SemiCondensedBoldItalic.ttf') format('truetype');
+}

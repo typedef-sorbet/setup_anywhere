@@ -19,7 +19,7 @@ SCRIPTDIR=`pwd`
 
 # Simple argparse, don't need to be fancy
 if [[ $1 == "all" ]]; then
-    args=( "awesome" "nvim" "git" "powerline" "kitty" "dwm" "conky" "dunst" "other" )
+    args=( "awesome" "nvim" "git" "powerline" "kitty" "dwm" "conky" "dunst" "iosevka" "other" )
 else
     args=( "$@" )
 fi
@@ -42,6 +42,9 @@ for arg in ${args[@]}; do
 
             cd - > /dev/null
         ;;
+	iosevka|Iosevka)
+		sudo cp -r Iosevka_dist/* /usr/share/fonts/truetype/
+	;;
         nvim|neovim)
             mkconfig
 
